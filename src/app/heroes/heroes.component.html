@@ -1,3 +1,10 @@
-<h2>{{hero.name | uppercase }} Details</h2>
+<h2>My heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" (click)="onSelect(hero)"><!-- om onclick de specifiek details van één hero te laten zien -->
+    <span class="badge">{{hero.id}}</span>&nbsp;{{hero.name}}
+  </li>
+</ul>
+
+<!-- <h2>{{hero.name | uppercase }} Details</h2>  oude versie om er maar eentje weer te geven
 <div><span>id:</span>{{hero.id}}</div>
-<div><label>name: </label><input [(ngModel)]="hero.name" placeholder="name"></div>
+<div><label>name: </label><input [(ngModel)]="hero.name" placeholder="name"></div> -->
